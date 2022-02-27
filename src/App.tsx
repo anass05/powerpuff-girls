@@ -1,12 +1,15 @@
 import React from 'react';
 import GlobalStyle from './styles/global';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './styles/theme';
+import { fonts } from './styles/theme';
+import GoogleFontLoader from 'react-google-font-loader';
+import 'antd/dist/antd.css';
+import Screen from './screens/Details';
 
 const App: React.FC = () => (
   <>
-    <ThemeProvider theme={theme} />
+    <GoogleFontLoader fonts={fonts} />
     <GlobalStyle />
+    <Screen />
   </>
 );
 export default App;
