@@ -13,9 +13,17 @@ import PlayButton from '../../assets/images/play.svg';
 
 type Props = {
   hidePlayButton: boolean;
+  title?: string;
+  description?: string;
+  genres?: [string];
 };
 
-const Details: React.FC<Props> = ({ hidePlayButton }) => (
+const Details: React.FC<Props> = ({
+  hidePlayButton,
+  title,
+  description,
+  genres,
+}) => (
   <DetailsContainer>
     <Row>
       <Col xl={{ span: 5, offset: 1 }}>
@@ -27,16 +35,16 @@ const Details: React.FC<Props> = ({ hidePlayButton }) => (
       </Col>
       <Col xl={{ span: 8, offset: 8 }}>
         <Content>
-          <Title>Lorem ipsum dolor</Title>
-          <Description>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-            deleniti dolorem esse facilis obcaecati quibusdam ratione rerum
-            ullam unde ut.
-          </Description>
-          <ExtraDetails>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Doloremque, reiciendis.
-          </ExtraDetails>
+          <Title>{title}</Title>
+          <Description dangerouslySetInnerHTML={{ __html: description }} />
+          {genres && (
+            <ExtraDetails>
+              <b>
+                <u>Genres:</u>
+              </b>
+              {genres.map((_) => ` ${_}`)}
+            </ExtraDetails>
+          )}
         </Content>
       </Col>
     </Row>

@@ -2,20 +2,15 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const EpisodeContainer = styled.div`
-  width: 300px;
-  height: 166px;
+  max-width: 300px;
+  max-height: 166px;
   margin-right: 16px;
   margin-bottom: 44px;
   position: relative;
-`;
-
-export const Clickable = styled.div`
-  width: 300px;
-  height: 166px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
+  &:hover span {
+    transform: scale(1.06);
+    right: 6px;
+  }
 `;
 
 export const Thumbnail = styled.img`
@@ -38,4 +33,6 @@ export const EpisodeNumber = styled.span`
   position: absolute;
   bottom: 0;
   right: 14px;
+  transition: 0.2s;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
 `;

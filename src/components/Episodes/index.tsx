@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { EpisodesContainer, Title } from './styles';
 import { Col, Row } from 'antd';
-import Carousel from 'react-simply-carousel';
 import Episode from '../Episode';
+import BearCarousel from 'bear-react-carousel';
 
-const Details: React.FC = () => {
-  const [active, setActive] = useState(0);
+type Props = {
+  episodes: Array<{
+    id: string;
+    number: number;
+    season: number;
+    name: string;
+    summary: string;
+    image: Record<any, any>;
+  }>;
+  onEpisodeClick: (name: string, summary: string, image: string) => void;
+};
+const Details: React.FC<Props> = ({ episodes, onEpisodeClick }) => {
   return (
     <EpisodesContainer>
       <Row>
@@ -15,17 +25,28 @@ const Details: React.FC = () => {
       </Row>
       <Row>
         <Col xl={{ span: 22, offset: 1 }}>
-          <Carousel
-            itemsToShow={6}
-            activeSlideIndex={active}
-            onRequestChange={setActive}
-            backwardBtnProps={{ show: false }}
-            forwardBtnProps={{ show: false }}
-          >
-            {[0, 1, 2, 3, 4, 5, 6].map((el) => (
-              <Episode key={`${el}`} value={`${el}`} />
-            ))}
-          </Carousel>
+          <BearCarousel
+            isEnableMouseMove={false}
+            isEnableNavButton={true}
+            data={episodes.map(
+              ({ id, number, summary, season, name, image }) => ({
+                key: id,
+                children: (
+                  <Episode
+                    key={`${id}`}
+                    episode={`${number}`}
+                    season={`${season}`}
+                    thumbnail={image?.medium}
+                    onClick={() =>
+                      onEpisodeClick(name, summary, image?.original)
+                    }
+                  />
+                ),
+              }),
+            )}
+            slidesPerView="auto"
+            staticHeight="166px"
+          />
         </Col>
       </Row>
     </EpisodesContainer>

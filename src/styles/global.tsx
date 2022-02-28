@@ -15,5 +15,10 @@ export default createGlobalStyle`
   body {
     font-family: "DM Sans",serif !important;
   }
+  .bear-react-carousel__nav-icon{
+    background-color: #525252;
+    opacity: .6;
+    border-radius: 15px;
+  }
   
 `;

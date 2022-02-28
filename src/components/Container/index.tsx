@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react';
 import { Background, ScreenContainer } from './styles';
-import { URLS } from '../../constants';
 
 type Props = {
   children: ReactNode;
+  background?: string;
 };
 
-const Container: React.FC<Props> = ({ children }) => (
+const Container: React.FC<Props> = ({ children, background }) => (
   <>
-    <Background src={URLS.cover} />
+    <Background src={background || ''} />
     <ScreenContainer>{children}</ScreenContainer>
   </>
 );

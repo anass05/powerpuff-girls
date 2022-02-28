@@ -7,3 +7,8 @@ export const API_URIS = {
   details: 'shows/6771',
   episodes: 'shows/6771/episodes',
 };
+
+export const routes = {
+  home: '/',
+  details: 'details/name=:name&image=:image&summary=:summary',
+};

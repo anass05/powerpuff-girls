@@ -1,14 +1,25 @@
 import React from 'react';
-import { Account, Avatar, Item, NavbarContainer, NavbarContent, Title } from './styles';
+import {
+  Account,
+  Avatar,
+  Item,
+  NavbarContainer,
+  NavbarContent,
+  Title,
+} from './styles';
 import { Col, Row } from 'antd';
 import { URLS } from '../../constants';
 
-const Navbar: React.FC = () => (
+type Props = {
+  title?: string;
+};
+
+const Navbar: React.FC<Props> = ({ title }) => (
   <NavbarContainer>
     <NavbarContent>
       <Row align={'middle'}>
         <Col xl={{ span: 4, offset: 1 }}>
-          <Title>PowerPuff Girls</Title>
+          <Title>{title}</Title>
         </Col>
         <Col xl={{ span: 2 }}>
           <Item>Home</Item>
