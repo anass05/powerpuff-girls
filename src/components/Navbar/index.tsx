@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Account,
   Avatar,
-  Item,
   NavbarContainer,
   NavbarContent,
   Title,
@@ -18,13 +17,21 @@ const Navbar: React.FC<Props> = ({ title }) => (
   <NavbarContainer>
     <NavbarContent>
       <Row align={'middle'}>
-        <Col xl={{ span: 4, offset: 1 }}>
+        <Col
+          xl={{ span: 6, offset: 1 }}
+          md={{ span: 12, offset: 1 }}
+          sm={{ span: 16, offset: 1 }}
+          xs={{ span: 23, offset: 1 }}
+        >
           <Title>{title}</Title>
         </Col>
-        <Col xl={{ span: 2 }}>
-          <Item>Home</Item>
-        </Col>
-        <Col xl={{ span: 2, offset: 14 }}>
+        <Col
+          xl={{ span: 3, offset: 13 }}
+          lg={{ span: 4, offset: 6 }}
+          md={{ span: 5, offset: 5 }}
+          sm={{ span: 6, offset: 0 }}
+          xs={{ span: 0, offset: 0 }}
+        >
           <Avatar src={URLS.avatar} />
           <Account>Guest User</Account>
         </Col>

@@ -2,8 +2,17 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const NavbarContainer = styled.div`
-  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
   position: relative;
+  @media (max-width: 256px) {
+    min-height: 40px;
+    max-height: 40px;
+  }
+  @media (max-width: 1200px) {
+    min-height: 80px;
+    max-height: 80px;
+  }
 `;
 
 export const Title = styled.span`
@@ -12,15 +21,6 @@ export const Title = styled.span`
   font-size: 32px;
   line-height: 48px;
   color: ${theme.colors.white};
-`;
-
-export const Item = styled.span`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  color: ${theme.colors.white};
-  border-bottom: solid 3px ${theme.colors.yellow};
 `;
 
 export const NavbarContent = styled.div`

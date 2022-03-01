@@ -19,12 +19,12 @@ const Details: React.FC<Props> = ({ episodes, onEpisodeClick }) => {
   return (
     <EpisodesContainer>
       <Row>
-        <Col xl={{ span: 22, offset: 1 }}>
+        <Col xs={{ span: 22, offset: 1 }}>
           <Title>Episodes</Title>
         </Col>
       </Row>
       <Row>
-        <Col xl={{ span: 22, offset: 1 }}>
+        <Col xs={{ span: 22, offset: 1 }}>
           <BearCarousel
             isEnableMouseMove={false}
             isEnableNavButton={true}

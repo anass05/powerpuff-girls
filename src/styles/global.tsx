@@ -20,5 +20,21 @@ export default createGlobalStyle`
     opacity: .6;
     border-radius: 15px;
   }
-  
+  ::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: #cccccc22;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccccccaa;
+    border-radius: 20px;
+  }
+  .pad-small {
+    @media (max-width: 768px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 `;

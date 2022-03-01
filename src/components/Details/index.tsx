@@ -26,14 +26,22 @@ const Details: React.FC<Props> = ({
 }) => (
   <DetailsContainer>
     <Row>
-      <Col xl={{ span: 5, offset: 1 }}>
+      <Col
+        xl={{ span: 5, offset: 1 }}
+        md={{ span: 9, offset: 1 }}
+        xs={{ span: 0 }}
+      >
         {!hidePlayButton && (
           <PlayContent>
             <PlayImage src={PlayButton} alt="" />
           </PlayContent>
         )}
       </Col>
-      <Col xl={{ span: 8, offset: 8 }}>
+      <Col
+        xl={{ span: 10, offset: 6 }}
+        md={{ span: 13, offset: 0 }}
+        xs={{ span: 22, offset: 1 }}
+      >
         <Content>
           <Title>{title}</Title>
           <Description dangerouslySetInnerHTML={{ __html: description }} />
