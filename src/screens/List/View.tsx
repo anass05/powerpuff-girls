@@ -12,7 +12,7 @@ type Props = {
 const Screen: React.FC<Props> = ({ show, episodes, onEpisodeClick }) => {
   return (
     <Container background={show?.image?.original}>
-      <Navbar title={show?.name} />
+      <Navbar title={show?.name} hideBackButton />
       <Details
         hidePlayButton={false}
         title={show?.name}

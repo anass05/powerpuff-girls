@@ -37,6 +37,13 @@ export const Avatar = styled.img`
   border-radius: 24px;
 `;
 
+export const BackButton = styled.img`
+  height: 40px;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+`;
+
 export const Account = styled.span`
   font-style: normal;
   font-weight: bold;

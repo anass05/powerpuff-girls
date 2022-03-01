@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
 export default createGlobalStyle`
   * {  
@@ -16,8 +17,8 @@ export default createGlobalStyle`
     font-family: "DM Sans",serif !important;
   }
   .bear-react-carousel__nav-icon{
-    background-color: #525252;
-    opacity: .6;
+    background-color: ${theme.colors.dark};
+    opacity: .9;
     border-radius: 15px;
   }
   ::-webkit-scrollbar {
