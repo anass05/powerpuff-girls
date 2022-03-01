@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import Container from '../../components/Container';
-import Details from '../../components/Details';
-import Episodes from '../../components/Episodes';
+import Navbar from 'components/Navbar';
+import Container from 'components/Container';
+import Details from 'components/Details';
+import Episodes from 'components/Episodes';
 
 type Props = {
   show: any;

@@ -1,4 +1,4 @@
-import EpisodesService from '../../../services/episodes.service';
+import EpisodesService from 'services/episodes.service';
 import actions from './episodes.actions';
 
 export const loadEpisodesAsync = () => (dispatch) => {

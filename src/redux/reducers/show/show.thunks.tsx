@@ -1,4 +1,4 @@
-import ShowService from '../../../services/show.service';
+import ShowService from 'services/show.service';
 import actions from './show.actions';
 
 export const loadShowAsync = () => (dispatch) => {

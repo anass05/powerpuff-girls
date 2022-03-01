@@ -1,4 +1,4 @@
-import { axiosInstance } from '../helpers/axiosInstance';
+import { axiosInstance } from 'helpers/axiosInstance';
 import { API_URIS } from '../constants';
 
 class EpisodesService {

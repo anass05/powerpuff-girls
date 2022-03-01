@@ -9,7 +9,7 @@ import {
   Title,
   PlayImage,
 } from './styles';
-import PlayButton from '../../assets/images/play.svg';
+import PlayButton from 'assets/images/play.svg';
 
 type Props = {
   hidePlayButton: boolean;

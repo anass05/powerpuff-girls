@@ -8,8 +8,8 @@ import {
   BackButton,
 } from './styles';
 import { Col, Row } from 'antd';
+import BackIcon from 'assets/images/back.png';
 import { URLS } from '../../constants';
-import BackIcon from '../../assets/images/back.png';
 
 type Props = {
   title?: string;

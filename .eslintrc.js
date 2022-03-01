@@ -14,10 +14,24 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-explicit-any': 0,
+    'import/resolver': [
+      0,
+      {
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+        ],
+      },
+    ],
   },
   settings: {
+    'import/resolver': { 'babel-module': {} },
     react: {
       version: 'detect',
     },
   },
+  plugins: ['import'],
 };
