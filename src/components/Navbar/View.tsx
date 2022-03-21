@@ -5,7 +5,7 @@ import {
   NavbarContainer,
   NavbarContent,
   Title,
-  BackButton,
+  BackButton
 } from './styles';
 import { Col, Row } from 'antd';
 import BackIcon from 'assets/images/back.png';

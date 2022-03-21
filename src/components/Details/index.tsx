@@ -7,7 +7,7 @@ import {
   ExtraDetails,
   PlayContent,
   Title,
-  PlayImage,
+  PlayImage
 } from './styles';
 import PlayButton from 'assets/images/play.svg';
 
@@ -22,7 +22,7 @@ const Details: React.FC<Props> = ({
   hidePlayButton,
   title,
   description,
-  genres,
+  genres
 }) => (
   <DetailsContainer>
     <Row>

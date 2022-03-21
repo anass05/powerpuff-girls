@@ -41,8 +41,8 @@ const Details: React.FC<Props> = ({ episodes, onEpisodeClick }) => {
                       onEpisodeClick(name, summary, image?.original)
                     }
                   />
-                ),
-              }),
+                )
+              })
             )}
             slidesPerView="auto"
             staticHeight="166px"

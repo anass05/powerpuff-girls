@@ -13,7 +13,7 @@ const Episode: React.FC<Props> = ({
   episode,
   season,
   thumbnail,
-  onClick,
+  onClick
 }) => {
   return (
     <EpisodeContainer key={key} onClick={onClick}>
