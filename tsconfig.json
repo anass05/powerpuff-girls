@@ -23,8 +23,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "incremental": true,
+    "baseUrl": "src",
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "src"
   },
   "include": [
     "src"

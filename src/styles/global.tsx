@@ -27,7 +27,7 @@ export default createGlobalStyle`
   }
   ::-webkit-scrollbar-track {
     background: #cccccc22;
-  }
+  } 
   ::-webkit-scrollbar-thumb {
     background-color: #ccccccaa;
     border-radius: 20px;

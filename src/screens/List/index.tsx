@@ -33,7 +33,7 @@ const Screen: React.FC = () => {
       routes.details
         .replace(':name', encodeURIComponent(name))
         .replace(':summary', encodeURIComponent(summary))
-        .replace(':image', encodeURIComponent(image)),
+        .replace(':image', encodeURIComponent(image))
     );
   };
   useEffect(() => {

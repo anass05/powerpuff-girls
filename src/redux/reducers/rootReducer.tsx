@@ -5,7 +5,7 @@ import episodesReducer from './episodes/episodes.reducer';
 const rootReducer = () =>
   combineReducers({
     show: showReducer,
-    episodes: episodesReducer,
+    episodes: episodesReducer
   });
 
 export default rootReducer;

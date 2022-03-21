@@ -12,13 +12,13 @@ export const theme = {
     white: '#FFFFFF',
     dark: '#000000',
     image_placeholder: '#333333',
-    invisible_dark: '#00000000',
-  },
+    invisible_dark: '#00000000'
+  }
 };
 
 export const fonts = [
   {
     font: 'DM Sans',
-    weights: [400, 500, 700],
-  },
+    weights: [400, 500, 700]
+  }
 ];

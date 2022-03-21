@@ -8,21 +8,21 @@ const showReducer = (state = initialState, { type, payload }) => {
         ...state,
         isLoading: true,
         data: null,
-        errorMessage: null,
+        errorMessage: null
       };
 
     case actionTypes.SHOW_LOAD_SUCCESS:
       return {
         ...state,
         isLoading: false,
-        data: payload,
+        data: payload
       };
 
     case actionTypes.SHOW_LOAD_ERROR:
       return {
         ...state,
         isLoading: false,
-        errorMessage: payload,
+        errorMessage: payload
       };
 
     default:

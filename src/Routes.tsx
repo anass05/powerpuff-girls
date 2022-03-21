@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter,
   Route,
-  Routes as BrowserRoutes,
+  Routes as BrowserRoutes
 } from 'react-router-dom';
 import List from './screens/List';
 import Details from './screens/Details';
